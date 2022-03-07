@@ -1,19 +1,17 @@
-import i18n from 'i18next'
-import {initReactI18next} from 'react-i18next';
-import PTBR from './locales/pt/pt-br.json'
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import PTBR from "./locales/pt/pt-br.json";
 
 const resources = {
-  'pt-BR': PTBR
-}
+  "pt-BR": PTBR,
+};
 
-i18n
-  .use(initReactI18next)
-  .init({
-    resources,
-    lng: "pt-Br",
-    interpolation:{
-      escapeValue: false,
-    }
-  })
+i18n.use(initReactI18next).init({
+  resources,
+  lng: "pt-Br",
+  interpolation: {
+    escapeValue: false,
+  },
+});
 
-export default i18n
+export default i18n;
