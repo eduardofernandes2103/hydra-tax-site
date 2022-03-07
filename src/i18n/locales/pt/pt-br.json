@@ -5,7 +5,12 @@
       "home": "Hydra TAX - Site"
     },
     "button": {
-      "home": "Home"
+      "home": "Home",
+      "delete": "Excluir"
+    },
+    "comissionNote": {
+      "currencySymbol": "R$",
+      "taxText": "IR Retido:"
     }
   }
 }
