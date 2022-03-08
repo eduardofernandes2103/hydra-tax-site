@@ -11,6 +11,18 @@
     "comissionNote": {
       "currencySymbol": "R$",
       "taxText": "IR Retido:"
+    },
+    "dayTradeCalc":{
+      "title":"Hydra TAX Solution - Day Trade"
+    },
+    "home":{
+      "title":"Hydra TAX Solution - Home"
+    },
+    "result":{
+      "title":"Hydra TAX Solution - Result"
+    },
+    "swingTradeCalc":{
+      "title":"Hydra TAX Solution - Swing Trade"
     }
   }
 }
