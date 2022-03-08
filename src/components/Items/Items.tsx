@@ -1,5 +1,5 @@
 import { useImperativeHandle, forwardRef, useState } from "react";
-import { ItemsProps } from "./ItensProps";
+import { ItemsProps } from "./ItemsProps";
 import { useTranslation } from "react-i18next";
 import { Container } from "./styles";
 
@@ -9,8 +9,10 @@ const Item = forwardRef(
 
     const [pauseProgress, setPauseProgress] = useState<boolean>(false);
 
-    const handlePauseProgress = () => {
-      setPauseProgress(!pauseProgress);
+    const handlePauseProgress = (status: boolean) => {
+      if(isActive && progress > 0){
+        setPauseProgress(status);
+      }
     };
 
     useImperativeHandle(ref, () => {
@@ -26,10 +28,10 @@ const Item = forwardRef(
         onClick={onClick}
         progress={progress}
         onMouseEnter={() => {
-          handlePauseProgress();
+          handlePauseProgress(true);
         }}
         onMouseLeave={() => {
-          handlePauseProgress();
+          handlePauseProgress(false);
         }}
       >
         <h3>{t(`${title}`)}</h3>

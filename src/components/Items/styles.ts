@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { ItemStyleProps } from "./ItensProps";
+import { ItemStyleProps } from "./ItemsProps";
 
 export const Container = styled.li<ItemStyleProps>`
   padding: 8px;
   padding-left: 20px;
   cursor: pointer;
   width: 28rem;
-  height: 30%;
+  height: 42%;
   background-color: var(--white);
   border-radius: 15px;
   display: flex;

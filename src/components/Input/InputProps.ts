@@ -1,5 +1,3 @@
-import { boolean } from "yup";
-
 export interface InputProps {
   error?: boolean;
   label: string;
