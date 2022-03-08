@@ -1,9 +1,11 @@
 import GlobalStyle from "./styles/globalStyles";
+import AppRoutes from "./routes";
+
 const App = () => {
   return (
     <div>
-      <GlobalStyle/>
-      <h1>Hydra TAX - Site</h1>
+      <GlobalStyle />
+      <AppRoutes />
     </div>
   );
 };
