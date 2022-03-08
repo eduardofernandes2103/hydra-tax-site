@@ -1,7 +1,9 @@
 import styled from 'styled-components'
+import { InputStyleProps } from './InputProps'
 
-export const StyledInput = styled.input`
-  width: 280px;
+export const StyledInput = styled.input<InputStyleProps>`
+  width: ${(props) => props.width};
+  min-width: 300px;
   height: 50px;
   color: var(--strong-grey);
   background-color: var(--slate-grey);
@@ -9,5 +11,5 @@ export const StyledInput = styled.input`
   font-size: 18px;
   border-radius: 5px;
   border: none;
-  border-bottom: 3px solid var(--sky-blue)
+  border-bottom: 3px solid ${(props) => (props.error ? "var(--red)" : "var(--sky-blue)")}
 `

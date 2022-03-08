@@ -1,11 +1,37 @@
-import { StyledInput } from './styles'
-import { InputProps } from './InputProps'
+import { useCallback } from "react";
+import { comissionDate, currency } from "./masks";
+import { InputProps } from "./InputProps";
+import { StyledInput } from "./styles";
 
+const Input = ({
+  error,
+  placeholder,
+  mask,
+  name,
+  width,
+  register,
+}: InputProps) => {
+  const handleKeys = useCallback(
+    (e: React.FormEvent<HTMLInputElement>) => {
+      if (mask === "comissionDate") {
+        comissionDate(e);
+      }
+      if (mask === "currency") {
+        currency(e);
+      }
+    },
+    [mask]
+  );
 
-const Input = ({placeholder, name, register} : InputProps) => {
-  return(
-    <StyledInput placeholder={placeholder} {...register(name)}/>
-  )
-}
+  return (
+    <StyledInput
+      width={width}
+      placeholder={placeholder}
+      {...register(name)}
+      onKeyUp={handleKeys}
+      error={error ? true : false}
+    />
+  );
+};
 
-export default Input
+export default Input;
