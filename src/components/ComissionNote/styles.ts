@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import {ComissionStyleProps} from './ComissionNoteProps'
 
-export const Container = styled.div`
-  width: 500px;
+export const Container = styled.div<ComissionStyleProps>`
+  width: 400px;
   height: 100px;
   min-height: 80px;
   margin-bottom: 1rem;
@@ -16,7 +17,10 @@ export const Container = styled.div`
   p {
     color: var(--strong-grey);
   }
+  .tax{
+    color: var(--red);
+  }
   span {
-    color: var(--green);
+    color: ${props => (props.isNegative ? "var(--red)" : "var(--green)")} ;
   }
 `;

@@ -4,24 +4,26 @@ import { ComissionNoteProps } from "./ComissionNoteProps";
 import { Container } from "./styles";
 
 const ComissionNote = ({
-  noteDate,
-  liquidValue,
-  tax,
+  comissionNoteDate,
+  noteValue,
+  taxIncluded,
   onClick,
 }: ComissionNoteProps) => {
   const { t } = useTranslation();
 
   return (
-    <Container>
-      <p>{noteDate}</p>
+    <Container isNegative={noteValue?.includes("-") ? true : false}>
+      <p>{comissionNoteDate}</p>
       <span>
         {t("comissionNote.currencySymbol")}
-        {liquidValue}
+        {noteValue}
       </span>
       <p>
         {t("comissionNote.taxText")}
-        {t("comissionNote.currencySymbol")}
-        {tax}
+        <span className="tax">
+          {t("comissionNote.currencySymbol")}
+          {taxIncluded ? taxIncluded : "0,00"}
+        </span>
       </p>
       <Button
         setBackground="var(--red)"
