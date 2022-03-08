@@ -15,6 +15,18 @@ import { useComission } from '../../providers/comissionNotesProvider';
 const FormComponent = ({ title }: FormComponentProps) => {
   const { t } = useTranslation();
   const { comissionNotes, addComission } = useComission()
+  const profitStatus = [
+    {
+      status: false,
+      name: "button.isPositive",
+      color: "var(--lime)"
+    },
+    {
+      status: true,
+      name: "button.isNegative",
+      color: "var(--red)"
+    }
+  ]
 
   const [isNegative, setIsNegative] = useState<boolean>(false)
 
@@ -49,6 +61,23 @@ const FormComponent = ({ title }: FormComponentProps) => {
 
     reset()
   };
+
+  const statusRender = () => {
+    return (
+      profitStatus.map((buttonStatus) => {
+        return (
+          <Button
+            setBackground={buttonStatus.color}
+            setColor="var(--white)"
+            setFont="18px"
+            setHeight="30px"
+            setWidth="120px"
+            onClick={() => setIsNegative(buttonStatus.status)}
+          >{t(buttonStatus.name)}</Button>
+        )
+      })
+    )
+  }
 
   const condicionalInputRender = () => {
     return (
@@ -94,26 +123,7 @@ const FormComponent = ({ title }: FormComponentProps) => {
       <div>
         <h2>{t(title)}</h2>
         <div className='conditionalButtons'>
-          <Button
-            setBackground="var(--lime)"
-            setColor="var(--white)"
-            setFont="18px"
-            setHeight="30px"
-            setWidth="120px"
-            onClick={() => setIsNegative(false)}
-          >
-            {t('button.isPositive')}
-          </Button>
-          <Button
-            setBackground="var(--red)"
-            setColor="var(--white)"
-            setFont="18px"
-            setHeight="30px"
-            setWidth="120px"
-            onClick={() => setIsNegative(true)}
-          >
-            {t('button.isNegative')}
-          </Button>
+          {statusRender()}
         </div>
       </div>
       <form onSubmit={handleSubmit(onSubFunction)}>
@@ -128,9 +138,7 @@ const FormComponent = ({ title }: FormComponentProps) => {
             error={errors.comissionNoteDate ? true : false}
           />
         </div>
-
         {condicionalInputRender()}
-
         <Button
           setBackground="var(--sky-blue)"
           setColor="var(--white)"
