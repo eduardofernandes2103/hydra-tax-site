@@ -16,7 +16,22 @@
       "title":"Hydra TAX Solution - Day Trade"
     },
     "home":{
-      "title":"Hydra TAX Solution - Home"
+      "title":"Hydra TAX Solution - Home",
+      "company": "Hydra TAX Solution",
+      "slogan": "Descomplicando sua DARF",
+      "primaryText": "Menos de 5 minutos pra calcular seu imposto",
+      "items":{
+        "dayTrade":{
+          "title": "DARF - Day Trade",
+          "subtitle": "Insira suas notas de corretagem e tenha o valor exato de tributos que devem ser arrecadados",
+          "path": "/dayTradeTaxCalculator"
+        },
+        "swingTrade":{
+          "title": "DARF - Swing Trade",
+          "subtitle": "Calcule quanto terá que pagar de imposto no seu lucro de Swing Trade",
+          "path": "/swingTradeTaxCalculator"
+        }
+      }
     },
     "result":{
       "title":"Hydra TAX Solution - Result"
