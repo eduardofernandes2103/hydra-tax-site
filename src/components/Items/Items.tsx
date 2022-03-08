@@ -10,7 +10,7 @@ const Item = forwardRef(
     const [pauseProgress, setPauseProgress] = useState<boolean>(false);
 
     const handlePauseProgress = (status: boolean) => {
-      if(isActive && progress > 0){
+      if (isActive && progress > 0) {
         setPauseProgress(status);
       }
     };

@@ -4,7 +4,7 @@ import { GiHydra } from "react-icons/gi";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
-import {ChildRefTypes} from './childRefTypes'
+import { ChildRefTypes } from './childRefTypes'
 import { Container } from "./styles";
 import Item from "../../components/Items/Items";
 import { Mock } from "./Home.mock";

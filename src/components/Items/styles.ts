@@ -14,13 +14,13 @@ export const Container = styled.li<ItemStyleProps>`
   justify-content: space-around;
   h3 {
     color: ${(props) =>
-      props.isActive ? "var(--strong-blue)" : "var(--medium-blue)"};
+    props.isActive ? "var(--strong-blue)" : "var(--medium-blue)"};
     font-weight: ${(props) => (props.isActive ? "bolder" : "500")};
     font-size: 28px;
   }
   p {
     color: ${(props) =>
-      props.isActive ? "var(--strong-blue)" : "var(--medium-grey)"};
+    props.isActive ? "var(--strong-blue)" : "var(--medium-grey)"};
     font-weight: ${(props) => (props.isActive ? "500" : "300")};
     font-size: 16px;
     width: 90%;

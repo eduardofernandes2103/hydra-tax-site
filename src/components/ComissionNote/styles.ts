@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {ComissionStyleProps} from './ComissionNoteProps'
+import { ComissionStyleProps } from './ComissionNoteProps'
 
 export const Container = styled.div<ComissionStyleProps>`
   width: 400px;
