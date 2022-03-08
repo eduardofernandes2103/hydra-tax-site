@@ -64,9 +64,10 @@ const FormComponent = ({ title }: FormComponentProps) => {
 
   const statusRender = () => {
     return (
-      profitStatus.map((buttonStatus) => {
+      profitStatus.map((buttonStatus, index) => {
         return (
           <Button
+            key={index}
             setBackground={buttonStatus.color}
             setColor="var(--white)"
             setFont="18px"
