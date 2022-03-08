@@ -4,12 +4,13 @@ import { GiHydra } from "react-icons/gi";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
+import {ChildRefTypes} from './childRefTypes'
 import { Container } from "./styles";
 import Item from "../../components/Items/Items";
 import { Mock } from "./Home.mock";
 
 const Home = () => {
-  const childRef = useRef(null);
+  const childRef = useRef<ChildRefTypes>(null);
   const { t } = useTranslation();
   const navigate = useNavigate();
 
@@ -34,7 +35,7 @@ const Home = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (childRef.current.isPausing) return;
+      if (childRef.current?.isPausing) return;
 
       setProgress(progress + 1);
       if (progress > 99) {

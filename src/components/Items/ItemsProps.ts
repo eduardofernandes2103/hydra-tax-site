@@ -2,7 +2,7 @@ export interface ItemsProps {
   key: number;
   title: string;
   subtitle: string;
-  progress?: number;
+  progress: number;
   isActive?: boolean;
   onClick: () => void;
 }
