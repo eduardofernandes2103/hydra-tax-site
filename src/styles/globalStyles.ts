@@ -13,7 +13,9 @@ const GlobalStyle = createGlobalStyle`
     --red: #F20505;
     --slate-grey: #C4C4C4;
     --medium-grey: #6F6F6F;
-    --strong-grey: #646464
+    --strong-grey: #646464;
+    --transparent-black: #3a3939c0 ;
+    --transparente-div: rgba(255, 255, 255, 0.7);
   }
   * {
       margin: 0;
@@ -24,6 +26,7 @@ const GlobalStyle = createGlobalStyle`
   body {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
   }
   body, input, button, h1, h3, h4, h5, h6, p, textarea, select{
       font-family: 'Roboto', sans-serif;
