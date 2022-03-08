@@ -1,6 +1,6 @@
 export interface InputProps {
   error?: boolean;
-  label: string;
+  color?: string
   name: string;
   mask: "comissionDate" | "currency";
   placeholder: string;

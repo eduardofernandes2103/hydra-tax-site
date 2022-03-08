@@ -4,6 +4,7 @@ import { InputProps } from "./InputProps";
 import { StyledInput } from "./styles";
 
 const Input = ({
+  color,
   error,
   placeholder,
   mask,
@@ -30,6 +31,7 @@ const Input = ({
       {...register(name)}
       onKeyUp={handleKeys}
       error={error ? true : false}
+      color={color ? color : "var(--strong-grey)"}
     />
   );
 };

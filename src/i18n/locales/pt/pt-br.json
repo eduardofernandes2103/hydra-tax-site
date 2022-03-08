@@ -6,7 +6,8 @@
     },
     "button": {
       "home": "Home",
-      "delete": "Excluir"
+      "delete": "Excluir",
+      "result": "Gerar DARF"
     },
     "comissionNote": {
       "currencySymbol": "R$",
@@ -14,6 +15,9 @@
     },
     "dayTradeCalc":{
       "title":"Hydra TAX Solution - Day Trade"
+    },
+    "header":{
+      "title": "Hydra Tax"
     },
     "home":{
       "title":"Hydra TAX Solution - Home",
@@ -32,6 +36,12 @@
           "path": "/swingTradeTaxCalculator"
         }
       }
+    },
+    "dayTrade":{
+      "dateLabel": "Data da nota de Corretagem",
+      "positiveNoteLiquid": "Lucro Liquido",
+      "negativeNoteLiquid": "Prejuízo Liquido",
+      "includeTax": "Valor de imposto retido na fonte"
     },
     "result":{
       "title":"Hydra TAX Solution - Result"

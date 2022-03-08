@@ -5,7 +5,7 @@ export const StyledInput = styled.input<InputStyleProps>`
   width: ${(props) => props.width};
   min-width: 300px;
   height: 50px;
-  color: var(--strong-grey);
+  color:  ${(props) => props.color};
   background-color: var(--slate-grey);
   padding: 16px;
   font-size: 18px;
