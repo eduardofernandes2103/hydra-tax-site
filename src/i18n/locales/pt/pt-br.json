@@ -7,14 +7,19 @@
     "button": {
       "home": "Home",
       "delete": "Excluir",
-      "result": "Gerar DARF"
+      "result": "Gerar DARF",
+      "isNegative": "Prejuízo",
+      "isPositive": "Lucro",
+      "registerNote": "Cadastrar"
     },
     "comissionNote": {
-      "currencySymbol": "R$",
-      "taxText": "IR Retido:"
+      "currencySymbol": "R$ ",
+      "taxText": "IR Retido: "
     },
     "dayTradeCalc":{
-      "title":"Hydra TAX Solution - Day Trade"
+      "title":"Hydra TAX Solution - Day Trade",
+      "leftSideTitle": "Cadastre sua Nota de Day Trade",
+      "rightSideTitle": "Notas cadastradas"
     },
     "header":{
       "title": "Hydra Tax"
