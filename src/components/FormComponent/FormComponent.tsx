@@ -52,8 +52,8 @@ const FormComponent = ({ title }: FormComponentProps) => {
     const newNote: ComissionNoteProps = {
       id: newId,
       comissionNoteDate: comissionNoteDate,
-      notePositiveValue: isNegative ? "0" : notePositiveValue,
-      noteNegativeValue: isNegative ? noteNegativeValue: "0",
+      notePositiveValue: notePositiveValue,
+      noteNegativeValue: noteNegativeValue,
       taxIncluded: taxIncluded
     }
 
