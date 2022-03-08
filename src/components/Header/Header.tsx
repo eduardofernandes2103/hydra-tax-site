@@ -12,10 +12,10 @@ const Header = () => {
     <Container>
       <div className="headerLogo">
         <GiHydra />
-        <h1>{t("title")}</h1>
+        <h1>{t("header.title")}</h1>
       </div>
       <Button
-        setBackground="var(--white)"
+        setBackground="var(--slate-grey)"
         setColor="var(--strong-grey)"
         setFont="24px"
         setWidth="125px"

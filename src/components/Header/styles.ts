@@ -2,14 +2,14 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-  height: 80px;
-  color: var(--white);
+  height: 100px;
+  color: var(--slate-grey);
   background-color: var(--strong-blue);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-size: 36px;
+  font-size: 32px;
   padding: 0 2rem;
   margin-bottom: 2rem;
   .headerLogo {
