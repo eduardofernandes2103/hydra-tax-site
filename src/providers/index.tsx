@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import { ComissionProvider } from './comissionNotesProvider'
 import { ResultProvider } from "./resultProvider";
 
 interface ProvidersProps {
@@ -7,7 +8,9 @@ interface ProvidersProps {
 
 const Providers = ({ children }: ProvidersProps) => {
   return (
-    <ResultProvider>{children}</ResultProvider>
+    <ComissionProvider>
+      <ResultProvider>{children}</ResultProvider>
+    </ComissionProvider>
   )
 }
 
